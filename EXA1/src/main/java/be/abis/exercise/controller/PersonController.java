@@ -16,7 +16,7 @@ public class PersonController {
 	@Autowired 
 	PersonService ps;
 	
-	@GetMapping("persons/{id}")
+	@GetMapping("{id}")
     public Person findPerson(@PathVariable("id") int id){
     	return ps.findPerson(id);    	
     }
