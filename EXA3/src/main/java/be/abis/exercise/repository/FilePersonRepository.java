@@ -21,7 +21,7 @@ import be.abis.exercise.model.Person;
 public class FilePersonRepository implements PersonRepository {
 
 	private ArrayList<Person> allPersons;
-	private String fileLoc = "c:\\temp\\personsSpring.csv";
+	private String fileLoc = "c:\\temp\\personsSpring2.csv";
 
 	public FilePersonRepository() {
 		allPersons = new ArrayList<Person>();
