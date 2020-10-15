@@ -19,6 +19,9 @@ public class AbisTrainingService implements TrainingService {
 	@Autowired
 	private CourseService courseService;	
 	
+	@Autowired
+	private PersonService personService;
+	
 	@Override
 	public CourseService getCourseService() {
 		return courseService;
@@ -36,12 +39,12 @@ public class AbisTrainingService implements TrainingService {
 
 	@Override
 	public Person findPerson(int id) {
-		return null;
+		return personService.findPerson(id);
 	}
 
 	@Override
 	public Person findPerson(String emailAddress, String passWord) {
-		return null;
+		return personService.findPerson(emailAddress, passWord);
 	}
 
 	@Override
@@ -51,7 +54,7 @@ public class AbisTrainingService implements TrainingService {
 
 	@Override
 	public void deletePerson(int id) throws PersonCanNotBeDeletedException {
-				
+		personService.deletePerson(id);			
 	}
 
 	@Override
